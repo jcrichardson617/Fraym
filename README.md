@@ -1,1 +1,5 @@
 # Fraym
+
+The task focused on predicting median_spend using spatial data derived from Nigeria’s 2016 DHS survey. After examining the data, I identified skewness in the target variable and applied a log transformation to normalize it. Multicollinearity among predictors, particularly spatial features like latitude, longitude, and environmental indicators, was addressed by calculating Variance Inflation Factors (VIF). A baseline model, predicting the mean, established an initial RMSE of 223,114 on the original scale.
+
+I experimented with Ridge and Lasso regressions because of the multicollinearity, achieving slight improvements. However, the XGBoost model, optimized via GridSearchCV, provided the best results with an RMSE of 146,638, demonstrating its robustness in handling complex relationships. Feature importance analysis highlighted geographic variables as critical drivers of spending patterns. I would be curious to see if an expanded parameter grid could have provided ever greater accuract, alas, my aging machine and imposed time limit can only handle so much.
